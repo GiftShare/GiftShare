@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Register - Brand</title>
+    <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+    <link rel="stylesheet" href="{% static 'styles.min.css' %}">
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
+        <div class="container"><a class="navbar-brand logo" href="#">Brand</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse"
+                id="navcol-1">
+                <ul class="nav navbar-nav ml-auto"></ul>
+            </div>
+        </div>
+    </nav>
+    <main class="page registration-page">
+        <section class="clean-block clean-form dark height">
+            <div class="container">
+                <div class="block-heading"></div>
+                <form method="post">
+                    {% csrf_token %}
+                    <h2 class="text-info">Registration</h2>
+                    <div class="form-group"><label for="name">Name</label><input class="form-control item" type="text" name="username"></div>
+                    <div class="form-group"><label for="password">Password</label><input class="form-control item" type="password" name="password1"></div>
+                    <div class="form-group"><label for="password">Password Confirmation</label><input class="form-control item" type="password" name="password2"></div>
+                    <div class="form-group"><label for="email">Email</label><input class="form-control item" type="email" name="email"></div>
+                    <input class="btn btn-primary btn-block" type="submit" value="Submit">
+                </form>
+            </div>
+        </section>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+    <script src="{% static 'script.min.js' %}"></script>
+</body>
+
+</html>
