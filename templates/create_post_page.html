@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'add_article_page.css' %}">
+    <title>Brand - create post</title>
+</head>
+<body>
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Create a post</h4>
+            <h6 class="text-muted card-subtitle mb-2">Put all the information below.</h6>
+            < class="table-responsive">
+            <form action="" method="POST">
+                {% csrf_token %}
+                <table class="table" style="border-bottom: 1px solid #dee2e6;">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Title:</td>
+                            <td><input type="text" name="title"></td>
+                        </tr>
+                        <tr>
+                            <td>Description:</td>
+                            <td><input type="textarea" name="description"></td>
+                        </tr>
+                        <tr>
+                            <td>Category:</td>
+                            <td>
+                                <div class="dropdown">
+                                    <div class="dropdown-menu">
+                                      <div class="dropdown-item">
+                                      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Categories:
+                                      </button>
+                                      <input type="text" class="form-control" aria-label="Text input with radio button">
+                                      <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                        <input type="radio" aria-label="Radio button for following text input">
+                                        </div>
+                                      </div>
+                                    </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            <input type="submit" class="btn btn-primary" type="button" style="float: right;margin-right: 7%;width: 120px;">
+            </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
